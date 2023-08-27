@@ -1,0 +1,32 @@
+<%= form_with(model: shot) do |form| %>
+  <% if shot.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(shot.errors.count, "error") %> prohibited this shot from being saved:</h2>
+
+      <ul>
+        <% shot.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="d-flex">
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="d-flex">
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="d-flex">
+  <%= form.label :image, "Upload Image" %>
+  <%= form.file_field :image, accept: "image/*" %>
+</div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
