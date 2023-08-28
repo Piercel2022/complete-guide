@@ -2,7 +2,7 @@
 <div class="flex flex-wrap justify-center">
   <% @shots.each do |shot| %>
     <div class="max-w-xs mx-4 my-6 bg-white rounded-lg shadow-md">
-      <%= link_to image_tag url_for(shot.image), class: "w-full rounded-t-lg" %>
+      <%=  image_tag url_for(shot.image), class: "w-full rounded-t-lg" %>
       <div class="p-4">
         <h2 class="text-lg font-semibold"><%= shot.title %></h2>
         <p class="mt-2 text-gray-600"><%= shot.description %></p>
