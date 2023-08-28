@@ -1,9 +1,12 @@
-<h1>New shot</h1>
+
+<div class="justify-center d-flex">
+<h1 class="text-3xl font-bold text-indigo-300">New shot</h1>
 
 <%= render "form", shot: @shot %>
 
 <br>
 
 <div>
-  <%= link_to "Back to shots", shots_path %>
+  <%= link_to "Back to shots", shots_path, class: "inline-block px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600"  %>
+</div>
 </div>

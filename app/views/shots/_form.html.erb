@@ -1,9 +1,10 @@
+ 
 <%= form_with(model: shot) do |form| %>
   <% if shot.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(shot.errors.count, "error") %> prohibited this shot from being saved:</h2>
+   <div id="error_explanation" class="p-4 mb-4 text-red-700 bg-red-100 rounded">
+      <h2 class="font-semibold"><%= pluralize(shot.errors.count, "error") %> prohibited this shot from being saved:</h2>
 
-      <ul>
+      <ul class="mt-2 list-disc list-inside">
         <% shot.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
@@ -11,22 +12,23 @@
     </div>
   <% end %>
 
-  <div class="d-flex">
-    <%= form.label :title, style: "display: block" %>
+  <div class="mb-4">
+    <%= form.label :title, class: "block font-semibold text-gray-800" %>
     <%= form.text_field :title %>
   </div>
 
-  <div class="d-flex">
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+  <div class="mb-4">
+    <%= form.label :description, class: "block font-semibold text-gray-800" %>
+    <%= form.text_area :description , class: "form-textarea mt-1 block w-full"%>
   </div>
 
-  <div class="d-flex">
-  <%= form.label :image, "Upload Image" %>
-  <%= form.file_field :image, accept: "image/*" %>
+  <div class="mb-4">
+  <%= form.label :image, "Upload Image", class: "block font-semibold text-gray-800" %>
+  <%= form.file_field :image, accept: "image/*", class: "form-input mt-1 block w-full" %>
 </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="mt-6">
+    <%= form.submit "Save", class: "px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600" %>
   </div>
 <% end %>
+
