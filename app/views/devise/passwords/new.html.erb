@@ -5,13 +5,13 @@
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
+  <div class="w-full">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    <%= f.submit "Send me reset password instructions", class: "bg-slate-500 hover:bg-slate-700 text-white text-base mt-3 rounded-lg py-2.5 px-5 transition-colors w-full text-[19px]" %>
   </div>
 <% end %>
 
