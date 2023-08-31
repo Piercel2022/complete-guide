@@ -39,7 +39,6 @@
 
     </a>
     
-    <div class="flex" >
     <div class="flex justify-around gap-x-12">
     <% if user_signed_in? %>
     <%= link_to current_user.email, user_path(current_user), class: 'text-white mr-4' %>
@@ -50,5 +49,4 @@
       <a class="block p-4 mx-2 text-xl font-semibold text-gray-400 rounded hover:bg-blue-50 hover:text-blue-600" href="users/sign_up">Hire Creatives</a>
       <% end %>
     </div>
-</div>
 </div>
