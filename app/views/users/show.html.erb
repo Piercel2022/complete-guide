@@ -1,0 +1,10 @@
+<!-- app/views/users/show.html.erb -->
+<div>
+  <h1>Profile</h1>
+  <p>Work Preferences: <%= @user.work_preferences %></p>
+  <p>Settings: <%= @user.settings %></p>
+
+  <%= link_to "Edit Profile", edit_user_registration_path %>
+  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+</div>
+
