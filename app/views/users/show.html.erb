@@ -4,7 +4,7 @@
   <p>Work Preferences: <%= @user.work_preferences %></p>
   <p>Settings: <%= @user.settings %></p>
 
-  <%= link_to "Edit Profile", edit_user_registration_path %>
-  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+  <%= link_to "Edit Profile", edit_user_registration_path, class: "block p-4 text-xl font-semibold text-gray-400 rounded hover:bg-blue-50 hover:text-blue-600" %>
+  <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "block p-4 text-xl font-semibold text-gray-400 rounded hover:bg-blue-50 hover:text-blue-600 " %>
 </div>
 
