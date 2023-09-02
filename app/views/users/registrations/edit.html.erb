@@ -33,11 +33,11 @@
   </div>
 
  
-    <%= f.submit "Update", class: "px-4 py-2 bg-blue-500 text-white m-3 rounded-md hover:bg-blue-600" %>
+    <%= f.submit "Update", class: "px-4 py-2 bg-blue-500 text-white my-3 rounded-md hover:bg-blue-600" %>
   
 <% end %>
 
 <div class=" d-flex">Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
 
-<%= link_to "Back", :back %>
+<%= link_to "Back", :back, class: "px-4 py-2 bg-gray-900 text-white my-3 rounded-md hover:bg-blue-600" %>
 </div>
