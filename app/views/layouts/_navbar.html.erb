@@ -41,12 +41,12 @@
     
     <div class="flex justify-around gap-x-12">
     <% if user_signed_in? %>
-    <%= link_to current_user.email, user_path(current_user), class: 'flex px-4 py-3 mb-2 text-xl font-semibold leading-loose text-center text-white bg-blue-600 hover:bg-blue-700 rounded-xl' %>
-    <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'flex px-4 py-3 mb-2 text-xl font-semibold leading-loose text-center text-white bg-blue-600 hover:bg-blue-700 rounded-xl' %>
-     <% else %>
-      <a class="flex p-4 text-xl font-semibold text-gray-400 rounded hover:bg-blue-50 hover:text-blue-600"  href="/users/sign_in">Log in</a>
-      <a class="flex px-4 py-3 mb-2 text-xl font-semibold leading-loose text-center text-white bg-blue-600 hover:bg-blue-700 rounded-xl" href="users/sign_up">Sign up</a>
-      <a class="block p-4 mx-2 text-xl font-semibold text-gray-400 rounded hover:bg-blue-50 hover:text-blue-600" href="users/sign_up">Hire Creatives</a>
-      <% end %>
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'd-flex  justify-center font-bold text-white bg-blue-600' %> |
+   <%= button_to "Sign Out", destroy_user_session_path, method: :delete %>
+  <% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'd-flex mt-5 ml-5 p-2 justify-center font-bold text-white bg-blue-700'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'd-flex  justify-center mt-5 p-2 font-bold text-white bg-blue-700'  %>
+  <% end %>
     </div>
 </div>
+
